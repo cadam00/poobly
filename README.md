@@ -31,8 +31,8 @@ class="uri">10.32614/CRAN.package.corbouli</a></p>
 
 ## **Hsiao Poolability test**
 
-The Hsiao poolability/homogeneity test ([Hsiao, 1986](#ref-hsiao1986);
-[Hsiao, 2022](#ref-hsiao2022)) for panel data is used to determine the
+The Hsiao poolability/homogeneity test (Hsiao, [1986](#ref-hsiao1986);
+[2022](#ref-hsiao2022)) for panel data is used to determine the
 homogeneity of coefficients across individuals in panel data. The test is
 comprised from three consecutive hypotheses. The hypothesis that slope and
 intercept coefficients are the same across the panel is initially tested. If
