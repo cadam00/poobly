@@ -46,12 +46,12 @@ individuals are indicated. The current implementation is derived from Hsiao
 
 <p align="center">
     <img src="figure1.png"
-    alt="Fig. 1: Hsiao tests' Hypothesis testing flow chart."
+    alt="Fig. 1: Hsiao homogeneity hypothesis testing flow chart."
     width="100%"/>
 </p>
 <p class="caption" align="center">
 <span id="ref-Figure1"></span>
-Fig. 1: Hsiao tests' Hypothesis testing flow chart.
+Fig. 1: Hsiao homogeneity hypothesis testing flow chart.
 </p>
 
 <table style="width: 368px; vertical-align: middle;
