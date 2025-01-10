@@ -1,9 +1,6 @@
-# corbouli 0.1.4
-
-## Minor changes
-
-- Update README.md, Introduction.Rmd, documentation and DESCRIPTION.
+# poobly 0.1.0
 
 ## R CMD check results
 
-0 errors \| 0 warnings \| 0 note
+0 errors \| 0 warnings \| 1 note
+* This is a new release.

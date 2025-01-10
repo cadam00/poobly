@@ -1,8 +1,0 @@
-build-last-errors="[]"
-build-last-errors-base-dir="~/packages/poobly/"
-build-last-outputs="[{\"type\":0,\"output\":\"==> devtools::test()\\n\\n\"},{\"type\":1,\"output\":\"\\u001B[1m\\u001B[22m\\u001B[36mℹ\\u001B[39m Testing \\u001B[34mpoobly\\u001B[39m\\r\\n\"},{\"type\":1,\"output\":\"\"},{\"type\":1,\"output\":\"\\u001B[32m✔\\u001B[39m | \\u001B[38;5;214mF\\u001B[39m \\u001B[35mW\\u001B[39m \\u001B[34m S\\u001B[39m \\u001B[32m OK\\u001B[39m | Context\\r\\n\"},{\"type\":1,\"output\":\"\\r⠏ |          0 | hsiao                             \"},{\"type\":1,\"output\":\"\\r⠋ |          1 | hsiao                             \"},{\"type\":1,\"output\":\"\\r⠴ |          6 | hsiao                             \"},{\"type\":1,\"output\":\"\\r⠼ |         15 | hsiao                             \"},{\"type\":1,\"output\":\"\\r\\u001B[32m✔\\u001B[39m |         17 | hsiao\\r\\n\"},{\"type\":1,\"output\":\"\\r\\n\"},{\"type\":1,\"output\":\"\"},{\"type\":1,\"output\":\"══ \\u001B[1mResults\\u001B[22m ════════════════════════════════════════\\r\\n\"},{\"type\":1,\"output\":\"\"},{\"type\":1,\"output\":\"[ FAIL 0 | WARN 0 | SKIP 0 | \\u001B[32mPASS\\u001B[39m 17 ]\\r\\n\"},{\"type\":1,\"output\":\"\"}]"
-compile_pdf_state="{\"tab_visible\":false,\"running\":false,\"target_file\":\"\",\"output\":\"\",\"errors\":[]}"
-files.monitored-path=""
-find-in-files-state="{\"handle\":\"\",\"input\":\"\",\"path\":\"\",\"regex\":false,\"ignoreCase\":false,\"results\":{\"file\":[],\"line\":[],\"lineValue\":[],\"matchOn\":[],\"matchOff\":[],\"replaceMatchOn\":[],\"replaceMatchOff\":[]},\"running\":false,\"replace\":false,\"preview\":false,\"gitFlag\":false,\"replacePattern\":\"\"}"
-imageDirtyState="1"
-saveActionState="-1"
