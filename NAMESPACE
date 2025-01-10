@@ -1,0 +1,5 @@
+importFrom("plm", "pdata.frame", "pdim", "plm", "index")
+importFrom("stats", "deviance", "coef", "pf", "formula", "printCoefmat")
+importFrom("methods", "is")
+export("hsiao")
+S3method(print,hsiao)
