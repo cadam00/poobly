@@ -166,7 +166,7 @@ there is strong evidence that both intercept and slope are heterogeneous.
 
 <span class="nocase" id="ref-hsiao1986">
 Hsiao, C. (1986) <em>Analysis of Panel Data</em>. 1st edn. Cambridge: Cambridge
-University Press (Econometric Society Monographs).
+University Press (Econometric Society Monographs).<br>
 
 <span class="nocase" id="ref-hsiao2022">
 Hsiao, C. (2022) <em>Analysis of Panel Data</em>. 4th edn. Cambridge: Cambridge
