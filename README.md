@@ -94,7 +94,7 @@ align="center">
 </table>
 <p align="center">
   <span class="nocase" id="ref-table1">
-    Table 1: Hsiao Hypothesis testing.
+    Table 1: Hsiao homogeneity hypothesis testing table.
   </span>
 </p>
 
