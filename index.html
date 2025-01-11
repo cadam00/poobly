@@ -46,8 +46,8 @@
 <div class="row">
   <main id="main" class="col-md-9">
 <div class="section level1">
-<div class="page-header"><h1 id="hsiao-poolability-test-1986-in-r">
-<strong>Hsiao Poolability test (<a href="#ref-hsiao1986">1986</a>) in R</strong><a class="anchor" aria-label="anchor" href="#hsiao-poolability-test-1986-in-r"></a>
+<div class="page-header"><h1 id="hsiao-poolability-test-19862022-in-r">
+<strong>Hsiao Poolability test (<a href="#ref-hsiao1986">1986</a>;<a href="#ref-hsiao2022">2022</a>) in R</strong><a class="anchor" aria-label="anchor" href="#hsiao-poolability-test-19862022-in-r"></a>
 </h1></div>
 <div class="section level2">
 <h2 id="install">
@@ -113,7 +113,7 @@ H<sub>2</sub>
 H<sub>3</sub>
 </td>
 <td style="width: 186.65px; height: 26px;" align="center">
-Heterogeneous intercept &amp; slope
+Heterogeneous intercepts &amp; slopes
 </td>
 </tr>
 <tr style="height: 26px;" align="center">
@@ -124,7 +124,7 @@ Heterogeneous intercept &amp; slope
 Pooled
 </td>
 <td style="width: 186.65px; height: 26px;" align="center">
-Heterogeneous intercept &amp; Homogeneous slope
+Heterogeneous intercepts &amp; Homogeneous slopes
 </td>
 </tr>
 </tbody></table>
@@ -160,14 +160,14 @@ Heterogeneous intercept &amp; Homogeneous slope
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="reference/hsiao.html">hsiao</a></span><span class="op">(</span><span class="va">lgaspcar</span> <span class="op">~</span> <span class="va">lincomep</span> <span class="op">+</span> <span class="va">lrpmg</span> <span class="op">+</span> <span class="va">lcarpcap</span>, <span class="va">Gasoline</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">##</span></span>
-<span><span class="co">##                   Hsiao Homogeneity Test</span></span>
+<span><span class="co">##                     Hsiao Homogeneity Test</span></span>
 <span><span class="co">##</span></span>
 <span><span class="co">## Hypothesis| Null |                Alternative</span></span>
-<span><span class="co">## ----------+------+-------------------------------------------</span></span>
+<span><span class="co">## ----------+------+---------------------------------------------</span></span>
 <span><span class="co">##     H1    |Pooled|                    H2</span></span>
-<span><span class="co">##     H2    |  H3  |      Heterogeneous intercept &amp; slope</span></span>
-<span><span class="co">##     H3    |Pooled|Heterogeneous intercept &amp; Homogeneous slope</span></span>
-<span><span class="co">## =============================================================</span></span>
+<span><span class="co">##     H2    |  H3  |      Heterogeneous intercepts &amp; slopes</span></span>
+<span><span class="co">##     H3    |Pooled|Heterogeneous intercepts &amp; Homogeneous slopes</span></span>
+<span><span class="co">## ===============================================================</span></span>
 <span><span class="co">##</span></span>
 <span><span class="co">## formula: lgaspcar ~ lincomep + lrpmg + lcarpcap</span></span>
 <span><span class="co">##</span></span>
