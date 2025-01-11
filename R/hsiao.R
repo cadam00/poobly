@@ -82,13 +82,13 @@ print.hsiao <- function(x, ...){
   dnames <- dimnames(x)
   names(dnames) <- c("",
        paste0(
-         "\n                  Hsiao Homogeneity Test\n",
-         "\nHypothesis| Null |                Alternative                ",
-         "\n----------+------+-------------------------------------------",
-         "\n    H1    |Pooled|                    H2                     ",
-         "\n    H2    |  H3  |      Heterogeneous intercept & slope      ",
-         "\n    H3    |Pooled|Heterogeneous intercept & Homogeneous slope",
-         "\n=============================================================\n",
+         "\n                    Hsiao Homogeneity Test\n",
+         "\nHypothesis| Null |                 Alternative                 ",
+         "\n----------+------+---------------------------------------------",
+         "\n    H1    |Pooled|                    H2                       ",
+         "\n    H2    |  H3  |      Heterogeneous intercepts & slopes      ",
+         "\n    H3    |Pooled|Heterogeneous intercepts & Homogeneous slopes",
+         "\n===============================================================\n",
          "\nformula: ", form, "\n"
        )
   )

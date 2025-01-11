@@ -5,7 +5,7 @@
 [![Codecov test coverage](https://codecov.io/gh/cadam00/poobly/graph/badge.svg)](https://app.codecov.io/gh/cadam00/poobly)
 <!-- badges: end -->
 
-# **Hsiao Poolability test ([1986](#ref-hsiao1986)) in R**
+# **Hsiao Poolability test ([1986](#ref-hsiao1986);[2022](#ref-hsiao2022)) in R**
 
 ## **Install**
 
@@ -83,7 +83,7 @@ align="center">
                                                                        </b></td>
 <td style="width: 136.65px; height: 26px;" align="center">H<sub>3</sub></td>
 <td style="width: 186.65px; height: 26px;" align="center">
-                                            Heterogeneous intercept & slope</td>
+                                          Heterogeneous intercepts & slopes</td>
 </tr>
 </tr>
 <tr style="height: 26px;" align="center">
@@ -91,7 +91,7 @@ align="center">
                                                                        </b></td>
 <td style="width: 136.65px; height: 26px;" align="center">Pooled</td>
 <td style="width: 186.65px; height: 26px;" align="center">
-                                Heterogeneous intercept & Homogeneous slope</td>
+                              Heterogeneous intercepts & Homogeneous slopes</td>
 </tr>
 </tbody>
 </table>
@@ -141,14 +141,14 @@ print(x)
 ```
 ```
 ##
-##                   Hsiao Homogeneity Test
+##                     Hsiao Homogeneity Test
 ##
 ## Hypothesis| Null |                Alternative
-## ----------+------+-------------------------------------------
+## ----------+------+---------------------------------------------
 ##     H1    |Pooled|                    H2
-##     H2    |  H3  |      Heterogeneous intercept & slope
-##     H3    |Pooled|Heterogeneous intercept & Homogeneous slope
-## =============================================================
+##     H2    |  H3  |      Heterogeneous intercepts & slopes
+##     H3    |Pooled|Heterogeneous intercepts & Homogeneous slopes
+## ===============================================================
 ##
 ## formula: lgaspcar ~ lincomep + lrpmg + lcarpcap
 ##
