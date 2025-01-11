@@ -28,16 +28,16 @@ knitr::opts_chunk$set(echo = TRUE, eval=FALSE)
 The Hsiao poolability/homogeneity test (Hsiao [1986](#ref-hsiao1986);
 [2022](#ref-hsiao2022)) for panel data is used to determine the
 homogeneity of coefficients across individuals in panel data. The test is
-comprised from three consecutive hypotheses. The hypothesis that slope and
-intercept coefficients are the same across the panel is initially tested. If
-this hypothesis is not rejected, then the total homogeneity (pool) of both
-slopes and intercepts is concluded. If the first hypothesis is rejected, the
-second hypothesis tests the homogeneity of the slope coefficients. If this
+composed of three consecutive hypotheses. The hypothesis that slope and
+intercept (constant) coefficients are the same across the panel is initially
+tested. If this hypothesis is not rejected, then the total homogeneity (pool) of
+both slopes and intercepts is concluded. If the first hypothesis is rejected,
+the second hypothesis tests the homogeneity of the slope coefficients. If this
 second hypothesis is rejected, different slope coefficients for all individuals
 are indicated, suggesting total heterogeneity. If this hypothesis is not
 rejected, then homogeneity of slope coefficients is implied. If this second
 hypothesis is not rejected, then the the third hypothesis tests the homogeneity
-of the intercept (constant) coefficients across individuals is performed. If
+of the intercept coefficients across individuals is performed. If
 this last hypothesis is not rejected, then total homogeneity is resulted. If
 this last hypothesis is rejected, equal slopes but different intercepts across
 individuals are indicated. The current implementation is derived from Hsiao
@@ -119,9 +119,10 @@ head(Gasoline)
 ```
 
 A `pdata.frame` or a `data.frame` object is expected as and a formula are
-required as input for the `hsiao` function. Note that `data.frame` object input
-should be able to be transformed as `pdata.frame` object and `index` input can
-be used as well. For more about `pdata.frame` see at `plm::pdata.frame`
+required as minimum essential input for the `hsiao` function. Note that
+`data.frame` object input should be able to be transformed as `pdata.frame`
+object and `index` input can be used as well. For more about `pdata.frame` see
+at `plm::pdata.frame`.
 
 
 ```r
@@ -151,7 +152,7 @@ print(x)
 According to this result, the coefficients of the given countries have both
 heterogeneous intercept & slope. In detail, the first hypothesis, $H_1$, is
 rejected in 1% statistical significance level, indicating strong evidence
-against the $H_1$. Then, the second hypothesis, $H_2$ is tested and rejected as
+against the $H_1$. Then, the second hypothesis, $H_2$, is tested and rejected as
 well in 1% statistical significance level. This is the end of the testing and so
 there is strong evidence that both intercept and slope are heterogeneous.
 
