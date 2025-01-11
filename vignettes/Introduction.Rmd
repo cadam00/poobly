@@ -66,20 +66,23 @@ align="center">
                                                             Alternative</b></td>
 </tr>
 <tr style="height: 26px;" align="center">
-<td style="width: 136.65px; height: 26px;" align="center">&nbsp;<b>H1</b></td>
+<td style="width: 136.65px; height: 26px;" align="center">&nbsp;<b>$H_1$</b>
+                                                                           </td>
 <td style="width: 136.65px; height: 26px;" align="center">Pooled</td>
-<td style="width: 186.65px; height: 26px;" align="center">H2</td>
+<td style="width: 186.65px; height: 26px;" align="center">$H_2$</td>
 </tr>
 </tr>
 <tr style="height: 26px;" align="center">
-<td style="width: 176.65px; height: 26px;" align="center">&nbsp;<b>H2</b></td>
-<td style="width: 136.65px; height: 26px;" align="center">H3</td>
+<td style="width: 176.65px; height: 26px;" align="center">&nbsp;<b>$H_2$</b>
+                                                                           </td>
+<td style="width: 136.65px; height: 26px;" align="center">$H_3$</td>
 <td style="width: 186.65px; height: 26px;" align="center">
                                             Heterogeneous intercept & slope</td>
 </tr>
 </tr>
 <tr style="height: 26px;" align="center">
-<td style="width: 136.65px; height: 26px;" align="center">&nbsp;<b>H3</b></td>
+<td style="width: 136.65px; height: 26px;" align="center">&nbsp;<b>$H_3$</b>
+                                                                           </td>
 <td style="width: 136.65px; height: 26px;" align="center">Pooled</td>
 <td style="width: 186.65px; height: 26px;" align="center">
                                 Heterogeneous intercept & Homogeneous slope</td>
