@@ -111,7 +111,7 @@ library(plm)
 # Import "Gasoline" dataset
 data("Gasoline", package = "plm")
 
-# Print first 6 elements
+# Print first 6 rows
 head(Gasoline)
 ```
 ```
