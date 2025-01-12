@@ -67,8 +67,8 @@ print(x)
 ##
 ## formula: lgaspcar ~ lincomep + lrpmg + lcarpcap
 ##
-##     Hypothesis  F-statistic   p-value
-##   1     H1       129.3166     < 0.001
-##   2     H2        27.3352     < 0.001
-##   3     H3        83.9608     < 0.001
+##    Hypothesis  F-statistic     df1         df2       p-value
+##  1     H1       129.3166       68          270       < 0.001
+##  2     H2        27.3352       51          270       < 0.001
+##  3     H3        83.9608       17          321       < 0.001
 }

@@ -43,21 +43,32 @@ hsiao <- function(formula, data, index = NULL, ...){
 
   RSS_with <- deviance(zz_within)
 
+  fstat1_df1 <- (N-1) * (K+1); fstat1_df2 <- (N * (T-(K+1)))
+  fstat2_df1 <- (N-1) * K    ; fstat2_df2 <- (N * (T-(K+1)))
+  fstat3_df1 <- (N-1)        ; fstat3_df2 <- (N * (T-1) - K)
+
+  df1 <- c(fstat1_df1, fstat2_df1, fstat3_df1)
+  df2 <- c(fstat1_df2, fstat2_df2, fstat3_df2)
+
   F_statistic <- c(
-    ((RSS_pool - RSS_indi) * (N * (T-(K+1)))) / (RSS_indi * (N-1) * (K+1)),
-    ((RSS_with - RSS_indi) * (N * (T-(K+1)))) / (RSS_indi * (N-1) * K),
-    ((RSS_pool - RSS_with) * (N * (T-1) - K)) / (RSS_with * (N-1))
+    ((RSS_pool - RSS_indi) * fstat1_df2) / (RSS_indi * fstat1_df1),
+    ((RSS_with - RSS_indi) * fstat2_df2) / (RSS_indi * fstat2_df1),
+    ((RSS_pool - RSS_with) * fstat3_df2) / (RSS_with * fstat3_df1)
+  )
+
+  p_value <- c(
+    pf(F_statistic[1], fstat1_df1, fstat1_df2, lower.tail = FALSE),
+    pf(F_statistic[2], fstat2_df1, fstat2_df2, lower.tail = FALSE),
+    pf(F_statistic[3], fstat3_df1, fstat3_df2, lower.tail = FALSE)
   )
 
   res <-
     list(
       "Hypothesis"  = c("H1", "H2", "H3"),
       "F.statistic" = F_statistic,
-      "p.value"     = c(
-        pf(F_statistic[1], (K+1) * (N-1), (N*(T-(K+1))), lower.tail = FALSE),
-        pf(F_statistic[2], K*(N-1),       (N*T-N*(K+1)), lower.tail = FALSE),
-        pf(F_statistic[3], (N-1),         (N*(T-1)-K),   lower.tail = FALSE)
-      ),
+      "p.value"     = p_value,
+      "df1"         = df1,
+      "df2"         = df2,
       "formula"     = formula
     )
 
@@ -75,6 +86,8 @@ print.hsiao <- function(x, ...){
   x <- data.frame(
     "Hypothesis"  = x$Hypothesis,
     "F-statistic" = x$F.statistic,
+    "df1"         = x$df1,
+    "df2"         = x$df2,
     "p-value"     = x$p.value,
     check.names   = FALSE
   )
