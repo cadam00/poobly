@@ -62,7 +62,7 @@ print(x)
 ## ----------+------+-------------------------------------------
 ##     H1    |Pooled|                    H2
 ##     H2    |  H3  |      Heterogeneous intercept & slope
-##     H3    |Pooled|Heterogeneous intercept & Homogeneous slope
+##     H3    |Pooled|Heterogeneous intercept & homogeneous slope
 ## =============================================================
 ##
 ## formula: lgaspcar ~ lincomep + lrpmg + lcarpcap

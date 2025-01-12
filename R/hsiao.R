@@ -87,7 +87,7 @@ print.hsiao <- function(x, ...){
          "\n----------+------+---------------------------------------------",
          "\n    H1    |Pooled|                    H2                       ",
          "\n    H2    |  H3  |      Heterogeneous intercepts & slopes      ",
-         "\n    H3    |Pooled|Heterogeneous intercepts & Homogeneous slopes",
+         "\n    H3    |Pooled|Heterogeneous intercepts & homogeneous slopes",
          "\n===============================================================\n",
          "\nformula: ", form, "\n"
        )
