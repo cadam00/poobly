@@ -5,7 +5,7 @@
 hsiao(formula, data, index = NULL, ...)
 }
 \description{
-Hsiao poolability test, as described by Hsiao (1986;2014).
+Hsiao poolability test, as described by Hsiao (1986;2022).
 }
 \arguments{
 \item{formula}{
