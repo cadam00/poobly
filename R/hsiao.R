@@ -43,23 +43,24 @@ hsiao <- function(formula, data, index = NULL, ...){
 
   RSS_with <- deviance(zz_within)
 
-  fstat1_df1 <- (N-1) * (K+1); fstat1_df2 <- (N * (T-(K+1)))
-  fstat2_df1 <- (N-1) * K    ; fstat2_df2 <- (N * (T-(K+1)))
-  fstat3_df1 <- (N-1)        ; fstat3_df2 <- (N * (T-1) - K)
+  df1 <- c((N-1) * (K+1),
+           (N-1) * K,
+           (N-1))
 
-  df1 <- c(fstat1_df1, fstat2_df1, fstat3_df1)
-  df2 <- c(fstat1_df2, fstat2_df2, fstat3_df2)
+  df2 <- c(N * (T-(K+1)),
+           N * (T-(K+1)),
+           N * (T-1) - K)
 
   F_statistic <- c(
-    ((RSS_pool - RSS_indi) * fstat1_df2) / (RSS_indi * fstat1_df1),
-    ((RSS_with - RSS_indi) * fstat2_df2) / (RSS_indi * fstat2_df1),
-    ((RSS_pool - RSS_with) * fstat3_df2) / (RSS_with * fstat3_df1)
+    ((RSS_pool - RSS_indi) * df2[1]) / (RSS_indi * df1[1]),
+    ((RSS_with - RSS_indi) * df2[2]) / (RSS_indi * df1[2]),
+    ((RSS_pool - RSS_with) * df2[3]) / (RSS_with * df1[3])
   )
 
   p_value <- c(
-    pf(F_statistic[1], fstat1_df1, fstat1_df2, lower.tail = FALSE),
-    pf(F_statistic[2], fstat2_df1, fstat2_df2, lower.tail = FALSE),
-    pf(F_statistic[3], fstat3_df1, fstat3_df2, lower.tail = FALSE)
+    pf(F_statistic[1], df1[1], df2[1], lower.tail = FALSE),
+    pf(F_statistic[2], df1[2], df2[2], lower.tail = FALSE),
+    pf(F_statistic[3], df1[3], df2[3], lower.tail = FALSE)
   )
 
   res <-
