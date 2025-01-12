@@ -9,11 +9,11 @@ hsiao <- function(formula, data, index = NULL, ...){
   names_ellipsis <- names(list(...))
 
   if ("model" %in% names_ellipsis){
-    stop("Remove 'model' arguement.")
+    stop("Remove 'model' argument.")
   }
 
   if ("effect" %in% names_ellipsis){
-    stop("Remove 'effect' arguement.")
+    stop("Remove 'effect' argument.")
   }
 
   if (!is(data, "pdata.frame") && is.data.frame(data)){

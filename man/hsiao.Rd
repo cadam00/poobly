@@ -20,7 +20,7 @@ An \code{index} input for \code{plm::pdata.frame} in case that \code{data.frame}
 is given instead of \code{plm::pdata.frame}.
 }
 \item{...}{
-Rest arguements passed to \code{plm::plm}. Note that \code{'model'} and
+Rest arguments passed to \code{plm::plm}. Note that \code{'model'} and
 \code{'effect'} can not be used in the current \code{hsiao} function and in
 such a case an error will be triggered.
 }
