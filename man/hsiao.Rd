@@ -37,7 +37,7 @@ same slopes but different constants is tested.
 
 \value{
 \code{hsiao} and \code{list} object with hypotheses with their corresponding
-F-statistics and p-values.
+F-statistics, degrees of freedom, and p-values.
 }
 
 \references{
