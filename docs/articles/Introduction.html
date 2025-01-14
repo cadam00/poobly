@@ -8,8 +8,8 @@
 <title>Introduction to poobly • poobly</title>
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.4.2/css/all.min.css" rel="stylesheet">
-<link href="../deps/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><script src="../deps/MathJax-3.2.2/tex-chtml.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Introduction to poobly">
 </head>
 <body>
@@ -20,7 +20,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">poobly</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.0</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.1</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -177,22 +177,22 @@ as well. For more about <code>pdata.frame</code> see at
 <code class="sourceCode R"><span><span class="co"># Hsiao hypothesis testing</span></span>
 <span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/hsiao.html">hsiao</a></span><span class="op">(</span><span class="va">lgaspcar</span> <span class="op">~</span> <span class="va">lincomep</span> <span class="op">+</span> <span class="va">lrpmg</span> <span class="op">+</span> <span class="va">lcarpcap</span>, <span class="va">Gasoline</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/print.html" class="external-link">print</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">##</span></span>
+<pre><code><span><span class="co">## </span></span>
 <span><span class="co">##                     Hsiao Homogeneity Test</span></span>
-<span><span class="co">##</span></span>
-<span><span class="co">## Hypothesis| Null |                Alternative</span></span>
+<span><span class="co">## </span></span>
+<span><span class="co">## Hypothesis| Null |                 Alternative                 </span></span>
 <span><span class="co">## ----------+------+---------------------------------------------</span></span>
-<span><span class="co">##     H1    |Pooled|                    H2</span></span>
-<span><span class="co">##     H2    |  H3  |      Heterogeneous intercepts &amp; slopes</span></span>
-<span><span class="co">##     H3    |Pooled|Heterogeneous intercepts &amp; Homogeneous slopes</span></span>
+<span><span class="co">##     H1    |Pooled|                    H2                       </span></span>
+<span><span class="co">##     H2    |  H3  |      Heterogeneous intercepts &amp; slopes      </span></span>
+<span><span class="co">##     H3    |Pooled|Heterogeneous intercepts &amp; homogeneous slopes</span></span>
 <span><span class="co">## ===============================================================</span></span>
-<span><span class="co">##</span></span>
+<span><span class="co">## </span></span>
 <span><span class="co">## formula: lgaspcar ~ lincomep + lrpmg + lcarpcap</span></span>
-<span><span class="co">##</span></span>
-<span><span class="co">##     Hypothesis  F-statistic   p-value</span></span>
-<span><span class="co">##   1     H1       129.3166     &lt; 0.001</span></span>
-<span><span class="co">##   2     H2        27.3352     &lt; 0.001</span></span>
-<span><span class="co">##   3     H3        83.9608     &lt; 0.001</span></span></code></pre>
+<span><span class="co">## </span></span>
+<span><span class="co">##     Hypothesis  F-statistic     df1         df2       p-value  </span></span>
+<span><span class="co">##   1     H1       129.3166       68          270       &lt; 0.001  </span></span>
+<span><span class="co">##   2     H2        27.3352       51          270       &lt; 0.001  </span></span>
+<span><span class="co">##   3     H3        83.9608       17          321       &lt; 0.001</span></span></code></pre>
 <p>According to this result, the coefficients of the given countries
 have both heterogeneous intercept &amp; slope. In detail, the first
 hypothesis, <span class="math inline">\(H_1\)</span>, is rejected in 1%

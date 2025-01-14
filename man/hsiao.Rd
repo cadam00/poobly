@@ -5,7 +5,7 @@
 hsiao(formula, data, index = NULL, ...)
 }
 \description{
-Hsiao poolability test, as described by Hsiao (1986;2014).
+Hsiao poolability test, as described by Hsiao (1986;2022).
 }
 \arguments{
 \item{formula}{
@@ -20,7 +20,7 @@ An \code{index} input for \code{plm::pdata.frame} in case that \code{data.frame}
 is given instead of \code{plm::pdata.frame}.
 }
 \item{...}{
-Rest arguements passed to \code{plm::plm}. Note that \code{'model'} and
+Rest arguments passed to \code{plm::plm}. Note that \code{'model'} and
 \code{'effect'} can not be used in the current \code{hsiao} function and in
 such a case an error will be triggered.
 }
@@ -37,7 +37,7 @@ same slopes but different constants is tested.
 
 \value{
 \code{hsiao} and \code{list} object with hypotheses with their corresponding
-F-statistics and p-values.
+F-statistics, degrees of freedom, and p-values.
 }
 
 \references{
@@ -56,19 +56,19 @@ data("Gasoline", package = "plm")
 x <- hsiao(lgaspcar ~ lincomep + lrpmg + lcarpcap, Gasoline)
 print(x)
 ##
-##                   Hsiao Homogeneity Test
+##                     Hsiao Homogeneity Test
 ##
-## Hypothesis| Null |                Alternative
-## ----------+------+-------------------------------------------
+## Hypothesis| Null |                 Alternative
+## ----------+------+---------------------------------------------
 ##     H1    |Pooled|                    H2
-##     H2    |  H3  |      Heterogeneous intercept & slope
-##     H3    |Pooled|Heterogeneous intercept & Homogeneous slope
-## =============================================================
+##     H2    |  H3  |      Heterogeneous intercepts & slopes
+##     H3    |Pooled|Heterogeneous intercepts & homogeneous slopes
+## ===============================================================
 ##
 ## formula: lgaspcar ~ lincomep + lrpmg + lcarpcap
 ##
-##     Hypothesis  F-statistic   p-value
-##   1     H1       129.3166     < 0.001
-##   2     H2        27.3352     < 0.001
-##   3     H3        83.9608     < 0.001
+##     Hypothesis  F-statistic     df1         df2       p-value
+##   1     H1       129.3166       68          270       < 0.001
+##   2     H2        27.3352       51          270       < 0.001
+##   3     H3        83.9608       17          321       < 0.001
 }

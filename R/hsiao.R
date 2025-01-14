@@ -9,11 +9,11 @@ hsiao <- function(formula, data, index = NULL, ...){
   names_ellipsis <- names(list(...))
 
   if ("model" %in% names_ellipsis){
-    stop("Remove 'model' arguement.")
+    stop("Remove 'model' argument.")
   }
 
   if ("effect" %in% names_ellipsis){
-    stop("Remove 'effect' arguement.")
+    stop("Remove 'effect' argument.")
   }
 
   if (!is(data, "pdata.frame") && is.data.frame(data)){
@@ -43,21 +43,33 @@ hsiao <- function(formula, data, index = NULL, ...){
 
   RSS_with <- deviance(zz_within)
 
+  df1 <- c((N-1) * (K+1),
+           (N-1) * K,
+           (N-1))
+
+  df2 <- c(N * (T-(K+1)),
+           N * (T-(K+1)),
+           N * (T-1) - K)
+
   F_statistic <- c(
-    ((RSS_pool - RSS_indi) * (N * (T-(K+1)))) / (RSS_indi * (N-1) * (K+1)),
-    ((RSS_with - RSS_indi) * (N * (T-(K+1)))) / (RSS_indi * (N-1) * K),
-    ((RSS_pool - RSS_with) * (N * (T-1) - K)) / (RSS_with * (N-1))
+    ((RSS_pool - RSS_indi) * df2[1]) / (RSS_indi * df1[1]),
+    ((RSS_with - RSS_indi) * df2[2]) / (RSS_indi * df1[2]),
+    ((RSS_pool - RSS_with) * df2[3]) / (RSS_with * df1[3])
+  )
+
+  p_value <- c(
+    pf(F_statistic[1], df1[1], df2[1], lower.tail = FALSE),
+    pf(F_statistic[2], df1[2], df2[2], lower.tail = FALSE),
+    pf(F_statistic[3], df1[3], df2[3], lower.tail = FALSE)
   )
 
   res <-
     list(
       "Hypothesis"  = c("H1", "H2", "H3"),
       "F.statistic" = F_statistic,
-      "p.value"     = c(
-        pf(F_statistic[1], (K+1) * (N-1), (N*(T-(K+1))), lower.tail = FALSE),
-        pf(F_statistic[2], K*(N-1),       (N*T-N*(K+1)), lower.tail = FALSE),
-        pf(F_statistic[3], (N-1),         (N*(T-1)-K),   lower.tail = FALSE)
-      ),
+      "p.value"     = p_value,
+      "df1"         = df1,
+      "df2"         = df2,
       "formula"     = formula
     )
 
@@ -75,6 +87,8 @@ print.hsiao <- function(x, ...){
   x <- data.frame(
     "Hypothesis"  = x$Hypothesis,
     "F-statistic" = x$F.statistic,
+    "df1"         = x$df1,
+    "df2"         = x$df2,
     "p-value"     = x$p.value,
     check.names   = FALSE
   )
@@ -87,7 +101,7 @@ print.hsiao <- function(x, ...){
          "\n----------+------+---------------------------------------------",
          "\n    H1    |Pooled|                    H2                       ",
          "\n    H2    |  H3  |      Heterogeneous intercepts & slopes      ",
-         "\n    H3    |Pooled|Heterogeneous intercepts & Homogeneous slopes",
+         "\n    H3    |Pooled|Heterogeneous intercepts & homogeneous slopes",
          "\n===============================================================\n",
          "\nformula: ", form, "\n"
        )

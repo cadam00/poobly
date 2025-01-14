@@ -1,6 +1,6 @@
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/poobly)](https://CRAN.R-project.org/package=poobly)
-[![Developmental version](https://img.shields.io/badge/devel%20version-0.1.0-blue.svg)](https://github.com/cadam00/poobly)
+[![Developmental version](https://img.shields.io/badge/devel%20version-0.1.1-blue.svg)](https://github.com/cadam00/poobly)
 [![R-CMD-check](https://github.com/cadam00/poobly/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cadam00/poobly/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/cadam00/poobly/graph/badge.svg)](https://app.codecov.io/gh/cadam00/poobly)
 <!-- badges: end -->
@@ -140,22 +140,22 @@ x <- hsiao(lgaspcar ~ lincomep + lrpmg + lcarpcap, Gasoline)
 print(x)
 ```
 ```
-##
+## 
 ##                     Hsiao Homogeneity Test
-##
-## Hypothesis| Null |                Alternative
+## 
+## Hypothesis| Null |                 Alternative                 
 ## ----------+------+---------------------------------------------
-##     H1    |Pooled|                    H2
-##     H2    |  H3  |      Heterogeneous intercepts & slopes
-##     H3    |Pooled|Heterogeneous intercepts & Homogeneous slopes
+##     H1    |Pooled|                    H2                       
+##     H2    |  H3  |      Heterogeneous intercepts & slopes      
+##     H3    |Pooled|Heterogeneous intercepts & homogeneous slopes
 ## ===============================================================
-##
+## 
 ## formula: lgaspcar ~ lincomep + lrpmg + lcarpcap
-##
-##     Hypothesis  F-statistic   p-value
-##   1     H1       129.3166     < 0.001
-##   2     H2        27.3352     < 0.001
-##   3     H3        83.9608     < 0.001
+## 
+##     Hypothesis  F-statistic     df1         df2       p-value  
+##   1     H1       129.3166       68          270       < 0.001  
+##   2     H2        27.3352       51          270       < 0.001  
+##   3     H3        83.9608       17          321       < 0.001
 ```
 
 According to this result, the coefficients of the given countries have both
