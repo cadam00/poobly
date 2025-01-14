@@ -4,6 +4,12 @@
 ##   101001. https://mpra.ub.uni-muenchen.de/id/eprint/101001
 ## Stata:
 ##   https://github.com/TICSTAT/ticstat/blob/master/Hsiao_poolability.do
+
+## Acknowledgements to Kevin Tappe for adding useful suggestions:
+## - fix typos + re-use calc. degrees of freedom, print degrees of freedom
+## https://github.com/cadam00/poobly/pull/1.
+
+
 hsiao <- function(formula, data, index = NULL, ...){
 
   names_ellipsis <- names(list(...))
