@@ -1,7 +1,7 @@
 Package: poobly
 Type: Package
 Title: Poolability Tests in Panel Data
-Version: 0.1.1
+Version: 0.1.2
 Authors@R: c(person("Christos", "Adam", role = c("aut", "cre"),
              email = "econp266@econ.soc.uoc.gr",
              comment = c(ORCID = "0009-0003-3244-7034"))

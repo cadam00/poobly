@@ -1,8 +1,8 @@
-# poobly 0.1.1
+# poobly 0.1.2
 
-- Minor updates from previously submitted 0.1.0 version.
+- Minor updates on manual.
 
 ## R CMD check results
 
-0 errors \| 0 warnings \| 1 note
-* This is a new release.
+0 errors \| 0 warnings \| 0 notes
+

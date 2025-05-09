@@ -51,9 +51,8 @@ University Press (Econometric Society Monographs), pp. 43-49.
 
 \note{
 \bold{Acknowledgments:}
-
-Dr. Kevin Tappe from the University of Stuttgart for useful suggestions
-regarding both the code and the documentation.
+We would like to acknowledge Dr. Kevin Tappe from the University of Stuttgart
+for useful suggestions regarding both the code and the documentation.
 
 }
 

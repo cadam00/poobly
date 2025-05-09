@@ -1,6 +1,6 @@
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/poobly)](https://CRAN.R-project.org/package=poobly)
-[![Developmental version](https://img.shields.io/badge/devel%20version-0.1.1-blue.svg)](https://github.com/cadam00/poobly)
+[![Developmental version](https://img.shields.io/badge/devel%20version-0.1.2-blue.svg)](https://github.com/cadam00/poobly)
 [![R-CMD-check](https://github.com/cadam00/poobly/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/cadam00/poobly/actions/workflows/R-CMD-check.yaml)
 [![Codecov test coverage](https://codecov.io/gh/cadam00/poobly/graph/badge.svg)](https://app.codecov.io/gh/cadam00/poobly)
 <!-- badges: end -->
